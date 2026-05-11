@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevisPro - Créez des Devis et Factures Premium en 3 minutes</title>
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="L'outil d'édition mobile 100% hors-ligne. Créez, imprimez et envoyez vos factures et devis par WhatsApp en quelques secondes.">
+    <meta name="author" content="DevisPro">
+    
+    <!-- OpenGraph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DevisPro - L'outil des commerçants d'élite">
+    <meta property="og:description" content="Générez vos factures professionnelles sans connexion internet. 100% Sécurisé, 100% Autonome.">
+    <meta property="og:image" content="assets/img/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="DevisPro - L'outil des commerçants d'élite">
+    <meta property="twitter:description" content="Générez vos factures professionnelles sans connexion internet. 100% Sécurisé, 100% Autonome.">
+    <meta property="twitter:image" content="assets/img/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Premium Agency Overlays -->
+    <div class="scroll-progress"></div>
+    <div class="noise-overlay"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Three.js Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-floating" id="mainNav">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand d-flex align-items-center fw-black font-outfit fs-3 magnetic-btn" href="#">
+                <img src="assets/img/logo.png" alt="Logo DevisPro" width="48" height="48" class="me-3 logo-spotlight">
+                <span class="text-gradient hover-glow">DevisPro</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto align-items-center font-inter">
+                    <li class="nav-item"><a class="nav-link fs-6 mx-3 nav-hover fw-medium magnetic-text" href="#merchant-value">Pourquoi l'obtenir ?</a></li>
+                    <li class="nav-item"><a class="nav-link fs-6 mx-3 nav-hover fw-medium magnetic-text" href="modeles.html">Nos Modèles</a></li>
+                    <li class="nav-item"><a class="nav-link fs-6 mx-3 nav-hover fw-medium magnetic-text" href="#features">Fonctionnalités avancées</a></li>
+                    <li class="nav-item"><a class="nav-link fs-6 mx-3 nav-hover fw-medium magnetic-text" href="#pricing">Licences</a></li>
+                </ul>
+                <div class="d-flex mt-3 mt-lg-0">
+                    <a class="btn btn-premium rounded-pill px-4 py-2 fw-semibold shadow-glow magnetic-btn" href="https://play.google.com/store/apps/details?id=com.devispro.facture" target="_blank" rel="noopener">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center min-vh-100 position-relative z-1 perspective-container">
+        <!-- Hero Aura Background -->
+        <div class="hero-aura" style="left: 20%; top: 40%; opacity: 0.1;"></div>
+        
+        <div class="container pt-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-start gs-reveal">
+                    <div class="badge border border-indigo text-indigo bg-blur mb-4 px-3 py-2 rounded-pill fw-bold gs-reveal" style="letter-spacing: 2px;">
+                        <i class="bi bi-rocket-takeoff-fill me-2"></i> L'ÉLITE DU COMMERCE EN 2026
+                    </div>
+                    
+                    <h1 class="hero-title-main mb-4 gs-reveal-up" style="font-size: clamp(2rem, 5vw, 3.8rem); text-align: left;">
+                        <span class="hero-text-light">L'application qui</span><br>
+                        <span class="hero-glow-text">transforme votre boutique</span><br>
+                        <span class="hero-text-light">en entreprise premium.</span>
+                    </h1>
+                    
+                    <p class="lead text-light-opacity mb-5 font-inter gs-reveal-fade">
+                        DevisPro est l'arme ultime des commerçants exigeants. 
+                        Ne vous contentez plus de vendre, imposez votre excellence avec des factures 
+                        qui respirent le prestige et l'innovation.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 gs-reveal-fade">
+                        <a href="#merchant-value" class="btn btn-premium btn-lg rounded-pill px-5 py-3 shadow-glow fw-bold magnetic-btn">
+                            <i class="bi bi-lightning-charge-fill me-2"></i> Commencer l'ascension
+                        </a>
+                        <a href="modeles.html" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 border-opacity-25 magnetic-btn">
+                            Catalogue
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center gs-reveal-up" style="transition-delay: 0.4s;">
+                    <div class="position-relative hero-img-wrapper">
+                        <div class="hero-aura" style="width: 300px; height: 300px; top: 50%; left: 50%; opacity: 0.2;"></div>
+                        <img src="assets/img/hero_mockup.png" alt="DevisPro Elite App" class="img-fluid border-glossy rounded-4 auto-animate-3d" style="max-height: 650px; width: 100%; object-fit: contain; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    
+    <!-- Industry Glass Ticker -->
+    <div class="py-5 border-bottom border-secondary border-opacity-10 bg-dark-transparent overflow-hidden">
+        <div class="container-fluid px-0">
+            <div class="logo-ticker-container">
+                <div class="logo-ticker-content d-flex align-items-center gap-4">
+                    <div class="glass-ticker-badge"><i class="bi bi-buildings-fill text-indigo"></i> BTP & ARTISANS</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-truck text-indigo"></i> LOGISTIQUE ELITE</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-shop text-indigo"></i> RETAIL PREMIUM</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-gear-wide-connected text-indigo"></i> INDUSTRIE SÉCURISÉE</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-lightning-fill text-indigo"></i> SERVICES EXPRESS</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-hammer text-indigo"></i> ARTISANAT D'ART</div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="glass-ticker-badge"><i class="bi bi-buildings-fill text-indigo"></i> BTP & ARTISANS</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-truck text-indigo"></i> LOGISTIQUE ELITE</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-shop text-indigo"></i> RETAIL PREMIUM</div>
+                    <div class="glass-ticker-badge"><i class="bi bi-gear-wide-connected text-indigo"></i> INDUSTRIE SÉCURISÉE</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Merchant Value Section -->
+    <section id="merchant-value" class="py-5 position-relative z-1 overflow-hidden bg-dark-transparent">
+        <div class="container py-5">
+            <div class="row mb-5 text-center gs-reveal-up">
+                <div class="col-12">
+                    <div class="badge bg-indigo text-white mb-3 px-3 py-2 rounded-pill shadow-glow gs-reveal-up"><i class="bi bi-briefcase-fill"></i> Spécial Commerçants</div>
+                    <h2 class="font-outfit fw-bold display-4">Pourquoi une application va <span class="text-gradient">booster vos bénéfices ?</span></h2>
+                    <p class="text-muted lead mx-auto" style="max-width: 700px;">Aujourd'hui, le client n'achète pas qu'un produit, il achète la confiance. Une facture professionnelle est la meilleure preuve de votre sérieux.</p>
+                </div>
+            </div>
+            
+            <div class="row align-items-center mt-5">
+                <div class="col-lg-6 stagger-container">
+                    <ul class="list-unstyled font-inter">
+                        <li class="mb-4 d-flex align-items-start glass-card p-4 rounded-4 stagger-item magnetic-wrap" style="border-left: 4px solid var(--primary);">
+                            <i class="bi bi-shield-lock-fill text-primary display-6 me-4 gs-icon"></i> 
+                            <div>
+                                <h4 class="fw-bold font-outfit">Zéro oubli, Zéro vol</h4>
+                                <p class="text-muted mb-0">Tracez chaque entrée d'argent et gardez un historique détaillé incrusté dans l'application. Fini les carnets perdus ou arrachés à la main.</p>
+                            </div>
+                        </li>
+                        <li class="mb-4 d-flex align-items-start glass-card p-4 rounded-4 stagger-item magnetic-wrap" style="border-left: 4px solid var(--purple);">
+                            <i class="bi bi-stars text-purple display-6 me-4 gs-icon"></i> 
+                            <div>
+                                <h4 class="fw-bold font-outfit">L'effet "Wow" sur le client</h4>
+                                <p class="text-muted mb-0">Rédigez un devis net avec un logo, la taxe pré-calculée, et partagez-le par WhatsApp sur le champ au moment où le client est "chaud".</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start glass-card p-4 rounded-4 stagger-item magnetic-wrap" style="border-left: 4px solid var(--accent);">
+                            <i class="bi bi-cash-stack text-accent display-6 me-4 gs-icon"></i> 
+                            <div>
+                                <h4 class="fw-bold font-outfit">Gagnez des marchés énormes</h4>
+                                <p class="text-muted mb-0">Les grandes entreprises ne collaborent qu'avec des fournisseurs carrés. Un export PDF structuré prouve à un directeur d'achat que vous êtes prêt.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 position-relative text-center parallax-dashboard">
+                    <div class="position-absolute top-50 start-50 translate-middle w-100 h-100 bg-primary opacity-25 rounded-circle" style="filter: blur(100px); z-index: -1;"></div>
+                    <img src="assets/img/dashboard_mockup.png" alt="Tableau de bord financier" class="img-fluid rounded-4 auto-animate-3d border-glossy" style="max-height: 600px; width: 100%; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-5 position-relative z-1 mb-4 border-top border-bottom border-secondary border-opacity-25" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container py-4">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4 mb-md-0 gs-reveal">
+                    <div class="display-3 fw-bold font-outfit text-primary mb-2"><span class="counter-val" data-target="15000">0</span>+</div>
+                    <div class="font-inter text-muted shadow-glow text-white text-uppercase tracking-wider fw-semibold small">Documents Édités</div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 gs-reveal" style="transition-delay: 0.1s;">
+                    <div class="display-3 fw-bold font-outfit text-purple mb-2"><span class="counter-val" data-target="10">0</span></div>
+                    <div class="font-inter text-muted shadow-glow text-white text-uppercase tracking-wider fw-semibold small">Modèles d'Élite</div>
+                </div>
+                <div class="col-md-4 gs-reveal" style="transition-delay: 0.2s;">
+                    <div class="display-3 fw-bold font-outfit text-accent mb-2"><span class="counter-val" data-target="0">0</span></div>
+                    <div class="font-inter text-muted shadow-glow text-white text-uppercase tracking-wider fw-semibold small">Données Volées (100% Local)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secteurs d'Excellence Section -->
+    <section class="py-5 position-relative z-1">
+        <div class="container py-5">
+            <div class="text-center mb-5 gs-reveal-up">
+                <span class="badge border border-indigo text-indigo bg-blur mb-3 px-3 py-2 rounded-pill fw-bold">DOMAINES D'APPLICATION</span>
+                <h2 class="font-outfit fw-bold display-4">Une solution, <span class="text-gradient">votre métier.</span></h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- BTP -->
+                <div class="col-lg-3 col-md-6 gs-reveal">
+                    <div class="glass-card p-4 rounded-4 h-100 industry-card text-center" data-tilt data-tilt-mobile="false">
+                        <div class="industry-icon-box mb-3 mx-auto shadow-glow">
+                            <i class="bi bi-tools fs-2"></i>
+                        </div>
+                        <h4 class="font-outfit fw-bold text-white mb-2">BTP & Artisans</h4>
+                        <p class="text-muted small font-inter">Éditez vos devis sur le chantier avec des calculs de surfaces complexes précis.</p>
+                    </div>
+                </div>
+                <!-- Commerce -->
+                <div class="col-lg-3 col-md-6 gs-reveal" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 rounded-4 h-100 industry-card text-center" data-tilt data-tilt-mobile="false">
+                        <div class="industry-icon-box mb-3 mx-auto shadow-glow bg-purple">
+                            <i class="bi bi-shop fs-2"></i>
+                        </div>
+                        <h4 class="font-outfit fw-bold text-white mb-2">Retail & Boutiques</h4>
+                        <p class="text-muted small font-inter">Impression de tickets thermiques et gestion des ventes directes ultra-rapide.</p>
+                    </div>
+                </div>
+                <!-- Logistique -->
+                <div class="col-lg-3 col-md-6 gs-reveal" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 rounded-4 h-100 industry-card text-center" data-tilt data-tilt-mobile="false">
+                        <div class="industry-icon-box mb-3 mx-auto shadow-glow bg-indigo">
+                            <i class="bi bi-box-seam fs-2"></i>
+                        </div>
+                        <h4 class="font-outfit fw-bold text-white mb-2">Grossistes & Distribution</h4>
+                        <p class="text-muted small font-inter">Gérez vos inventaires et facturez de gros volumes de pièces sans effort.</p>
+                    </div>
+                </div>
+                <!-- Logistique -->
+                <div class="col-lg-3 col-md-6 gs-reveal" style="transition-delay: 0.3s;">
+                    <div class="glass-card p-4 rounded-4 h-100 industry-card text-center" data-tilt data-tilt-mobile="false">
+                        <div class="industry-icon-box mb-3 mx-auto shadow-glow bg-platinum">
+                            <i class="bi bi-briefcase fs-2"></i>
+                        </div>
+                        <h4 class="font-outfit fw-bold text-white mb-2">Prestataires Globaux</h4>
+                        <p class="text-muted small font-inter">Impressionnez vos clients avec des PDFs haut de gamme et signature digitale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supercharged Features Section -->
+    <section id="features" class="py-5 position-relative z-1 horizontal-scroll-trigger">
+        <div class="container py-5">
+            <div class="text-center mb-5 gs-reveal-up">
+                <h2 class="font-outfit fw-bold display-4">L'arsenal <span class="text-gradient">complet</span> de l'expert</h2>
+                <p class="text-muted lead mx-auto" style="max-width: 700px;">Découvrez des fonctionnalités pensées par des professionnels pour des professionnels. Ne laissez plus aucun détail freiner votre croissance.</p>
+            </div>
+            
+            <div class="row g-4 features-grid">
+                <!-- Dictée -->
+                <div class="col-lg-4 col-md-6 feature-card">
+                    <div class="glass-card h-100 p-4 rounded-4" data-tilt data-tilt-mobile="false" data-tilt-max="15">
+                        <div class="icon-box mb-3 text-primary"><i class="bi bi-mic-fill fs-1"></i></div>
+                        <h4 class="font-outfit fw-bold mb-3">Dictée Vocale Intelligente</h4>
+                        <p class="text-muted font-inter" style="line-height: 1.6;">Le client est en face et vous dicte la commande ? Ne perdez plus de temps sur le petit clavier de votre téléphone. Utilisez notre module de dictée : prononcez vos articles, l'Intelligence Artificielle retranscrit tout instantanément. Gagnez un temps précieux lors des inventaires ou devant des clients pressés.</p>
+                    </div>
+                </div>
+                <!-- Devis -> Facture -->
+                <div class="col-lg-4 col-md-6 feature-card">
+                    <div class="glass-card h-100 p-4 rounded-4" data-tilt data-tilt-mobile="false" data-tilt-max="15">
+                        <div class="icon-box mb-3 text-primary"><i class="bi bi-magic fs-1"></i></div>
+                        <h4 class="font-outfit fw-bold mb-3">Devis ➔ Facture Express</h4>
+                        <p class="text-muted font-inter" style="line-height: 1.6;">Fini la double saisie fatigante et propice aux erreurs de calcul ! Dès que votre client partenaire approuve le devis estimatif que vous lui avez envoyé, pressez un seul bouton pour que DevisPro génère automatiquement la facture de vente finale associée, avec toutes les informations, réductions et taxes appliquées.</p>
+                    </div>
+                </div>
+                <!-- Themes -->
+                <div class="col-lg-4 col-md-6 feature-card">
+                    <div class="glass-card h-100 p-4 rounded-4" data-tilt data-tilt-mobile="false" data-tilt-max="15">
+                        <div class="icon-box mb-3 text-accent"><i class="bi bi-palette-fill fs-1"></i></div>
+                        <h4 class="font-outfit fw-bold mb-3">10 Modèles & 15 Couleurs</h4>
+                        <p class="text-muted font-inter" style="line-height: 1.6;">L'aspect visuel de votre facture détermine le sérieux de votre entreprise. Ne vous contentez pas de noir et blanc neutre. Basculez d'un clic entre nos 10 modèles d'agencement exclusifs et appliquez instantanément les couleurs dominantes de votre propre logo grâce aux 15 ambiances colorées disponibles dans l'application.</p>
+                    </div>
+                </div>
+                <!-- A4 & Ticket -->
+                <div class="col-lg-4 col-md-6 feature-card">
+                    <div class="glass-card h-100 p-4 rounded-4" data-tilt data-tilt-mobile="false" data-tilt-max="15">
+                        <div class="icon-box mb-3 text-success"><i class="bi bi-printer-fill fs-1"></i></div>
+                        <h4 class="font-outfit fw-bold mb-3">A4 & Ticket de Caisse Mobile</h4>
+                        <p class="text-muted font-inter" style="line-height: 1.6;">Que vous soyez dans une boutique physique derrière un comptoir ou en déplacement, vos impressions doivent s'adapter ! Générez vos bilans au format A4 PDF standard ultra-formel, ou connectez votre Android directement à une petite imprimante thermique Bluetooth pour sortir des tickets de caisse réels, prêts à être donnés en main propre.</p>
+                    </div>
+                </div>
+                <!-- Signature -->
+                <div class="col-lg-4 col-md-6 feature-card">
+                    <div class="glass-card h-100 p-4 rounded-4" data-tilt data-tilt-mobile="false" data-tilt-max="15">
+                        <div class="icon-box mb-3 text-danger"><i class="bi bi-pen-fill fs-1"></i></div>
+                        <h4 class="font-outfit fw-bold mb-3">Validation par Signature Digitale</h4>
+                        <p class="text-muted font-inter" style="line-height: 1.6;">Ne laissez plus la place au moindre doute et verrouillez formellement toutes vos transactions commerciales en face à face. Tendez votre téléphone ou tablette à votre interlocuteur, il appose directement sa signature avec son doigt sur l'écran et bingo : elle est immédiatement figée sur le PDF sécurisé !</p>
+                    </div>
+                </div>
+                <!-- Langues -->
+                <div class="col-lg-4 col-md-6 feature-card">
+                    <div class="glass-card h-100 p-4 rounded-4" data-tilt data-tilt-mobile="false" data-tilt-max="15">
+                        <div class="icon-box mb-3 text-warning"><i class="bi bi-translate fs-1"></i></div>
+                        <h4 class="font-outfit fw-bold mb-3">Support Multi-langages Global</h4>
+                        <p class="text-muted font-inter" style="line-height: 1.6;">Le commerce et les affaires n'ont pas de frontière, vos limites géographiques sont brisées. Produisez vos documents financiers dans une autre langue, l'application traduira la terminologie officielle de la facture (articles, sommes, taxes...) pour rassurer totalement votre partenaire chinois, anglophone ou arabe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="py-5 position-relative z-1 mb-3">
+        <div class="container py-4">
+            <div class="text-center mb-5 gs-reveal-up">
+                <span class="badge bg-indigo text-white px-3 py-2 rounded-pill mb-3 shadow-glow" style="font-size:0.85rem">L'HEURE DU CHOIX</span>
+                <h2 class="font-outfit fw-bold display-5">Le combat est <span class="text-gradient">inégal</span></h2>
+                <p class="text-muted font-inter mx-auto mt-3" style="max-width: 600px;">Pourquoi l'élite des commerçants jette définitivement ses vieux carnets de reçus pour passer au confort numérique cette année ?</p>
+            </div>
+            
+            <div class="row justify-content-center gs-reveal-up">
+                <div class="col-lg-10">
+                    <div class="glass-card p-4 rounded-4 shadow-lg border-primary border-opacity-25" data-tilt data-tilt-mobile="false" data-tilt-max="2">
+                        <div class="table-responsive comparison-table font-inter">
+                            <table class="table table-borderless align-middle mb-0">
+                                <thead>
+                                    <tr class="text-center font-outfit border-bottom border-secondary border-opacity-25">
+                                        <th class="text-start fs-5 text-white pb-4" style="width: 40%">Critères</th>
+                                        <th class="fs-5 text-muted opacity-50 pb-4" style="width: 30%">Méthode classique</th>
+                                        <th class="fs-4 text-gradient fw-bold pb-4 shadow-glow" style="width: 30%">DevisPro <i class="bi bi-patch-check-fill ms-1 text-primary"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom border-light border-opacity-10">
+                                        <td class="fw-medium text-white py-4"><i class="bi bi-wifi text-warning fs-5 me-2"></i> Connexion Internet</td>
+                                        <td class="text-center text-danger opacity-75"><i class="bi bi-x-circle me-2"></i> Constamment requise</td>
+                                        <td class="text-center text-success td-devispro fw-bold fs-5 py-4 position-relative overflow-hidden">
+                                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-success opacity-10"></div>
+                                            <i class="bi bi-phone-fill me-2"></i> Pas de connexion requise
+                                        </td>
+                                    </tr>
+                                    <tr class="border-bottom border-light border-opacity-10">
+                                        <td class="fw-medium text-light py-3">Création d'une Facture</td>
+                                        <td class="text-center text-danger opacity-75"><i class="bi bi-x-circle me-2"></i> Lente, calculs manuels</td>
+                                        <td class="text-center text-success td-devispro py-3 fw-bold"><i class="bi bi-check-circle-fill me-2"></i> Express (Dictée vocale)</td>
+                                    </tr>
+                                    <tr class="border-bottom border-light border-opacity-10">
+                                        <td class="fw-medium text-light py-3">Rendu Professionnel</td>
+                                        <td class="text-center text-danger opacity-75"><i class="bi bi-x-circle me-2"></i> Papier carbone altérable</td>
+                                        <td class="text-center text-success td-devispro py-3 fw-bold"><i class="bi bi-check-circle-fill me-2"></i> 10 Modèles & 15 Couleurs Premium</td>
+                                    </tr>
+                                    <tr class="border-bottom border-light border-opacity-10">
+                                        <td class="fw-medium text-light py-3">Maîtrise des Données</td>
+                                        <td class="text-center text-danger opacity-75"><i class="bi bi-x-circle me-2"></i> Client pris en otage par le Cloud</td>
+                                        <td class="text-center text-success td-devispro py-3 fw-bold"><i class="bi bi-check-circle-fill me-2"></i> Exportation libre de vos données</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium text-light py-3">Abonnement imposé</td>
+                                        <td class="text-center text-danger opacity-75"><i class="bi bi-x-circle me-2"></i> Prélèvements automatiques</td>
+                                        <td class="text-center text-success td-devispro py-3 fw-bold"><i class="bi bi-check-circle-fill me-2"></i> Aucun ! Liberté absolue</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Templates Teaser Section -->
+    <section class="py-5 position-relative z-1 overflow-hidden">
+        <div class="container py-4">
+            <div class="glass-card p-5 rounded-5 border-primary border-opacity-25 shadow-glow gs-reveal-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <h2 class="font-outfit fw-bold display-5 mb-3">10 modèles & <span class="text-gradient">15 univers couleurs</span></h2>
+                        <p class="text-muted font-inter lead mb-4 mb-lg-0">Découvrez comment nos modèles transforment vos factures en véritables documents de prestige. Du minimaliste au corporate, trouvez le style qui vous ressemble.</p>
+                    </div>
+                    <div class="col-lg-5 text-center text-lg-end">
+                        <a href="modeles.html" class="btn btn-premium btn-lg rounded-pill px-5 py-3 fw-bold magnetic-btn shadow-glow">
+                            <i class="bi bi-eye-fill me-2"></i> Voir le catalogue
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Value Calculator -->
+    <section class="py-5 position-relative z-1" id="calculator">
+        <div class="container py-5">
+            <div class="glass-card p-5 rounded-5 border-primary border-opacity-25 shadow-glow">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="badge bg-indigo text-white mb-3 px-3 py-2 rounded-pill fw-bold">CALCULATEUR DE GAINS</div>
+                        <h2 class="font-outfit fw-bold display-5 mb-4">Combien de temps <span class="text-gradient">vous coûte</span> le papier ?</h2>
+                        <p class="text-light-opacity font-inter lead">Chaque minute passée à griffonner une facture est une minute de moins passée à vendre. Faites le test.</p>
+                        
+                        <div class="mt-5">
+                            <label for="invoiceRange" class="form-label text-white fw-bold d-flex justify-content-between">
+                                Factures / jour : <span class="text-primary fs-4" id="rangeVal">10</span>
+                            </label>
+                            <input type="range" class="form-range custom-range" id="invoiceRange" min="1" max="50" value="10">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="glass-card bg-dark bg-opacity-50 p-4 rounded-4 text-center border-primary border-opacity-10">
+                            <h5 class="text-muted font-inter mb-4">VOTRE ÉCONOMIE MENSUELLE</h5>
+                            <div class="display-2 fw-bold text-gradient mb-2 shadow-glow" id="timeSaved">20</div>
+                            <div class="fs-4 text-primary fw-bold font-outfit mb-4">HEURES GAGNÉES</div>
+                            <p class="text-muted small mb-0">Basé sur une moyenne de 10 min par facture papier vs 2 min avec DevisPro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Steps) Section -->
+    <section class="py-5 position-relative z-1 bg-dark-transparent">
+        <div class="container py-5">
+            <div class="row align-items-center text-center text-lg-start">
+                <div class="col-lg-5 mb-5 mb-lg-0 gs-reveal">
+                    <div class="badge border border-primary text-primary bg-blur mb-3 px-3 py-2 rounded-pill fw-bold">EFFICACITÉ MAXIMALE</div>
+                    <h2 class="font-outfit fw-bold display-5 mb-4">Opérationnel en <span class="text-gradient">3 minutes</span></h2>
+                    <p class="text-muted font-inter lead mb-4">Le temps est la seule ressource que vous ne pouvez pas acheter. Nous avons retiré tout ce qui est compliqué pour que n'importe qui puisse facturer, à portée de doigt.</p>
+                </div>
+                <div class="col-lg-7 stagger-container">
+                    <div class="d-flex align-items-start mb-4 stagger-item">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-4 shadow-glow" style="width: 60px; height: 60px; flex-shrink: 0; font-size: 1.5rem; font-weight: bold;">1</div>
+                        <div>
+                            <h4 class="font-outfit fw-bold text-white">Téléchargez et Créez votre profil</h4>
+                            <p class="text-muted font-inter small">Ajoutez le nom de votre entreprise, votre devise (XOF, EUR...) et importez votre logo d'entreprise. Vous êtes prêt.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4 stagger-item">
+                        <div class="bg-purple text-white rounded-circle d-flex align-items-center justify-content-center me-4 shadow-glow" style="width: 60px; height: 60px; flex-shrink: 0; font-size: 1.5rem; font-weight: bold;">2</div>
+                        <div>
+                            <h4 class="font-outfit fw-bold text-white">Constituez votre base secrète</h4>
+                            <p class="text-muted font-inter small">Ajoutez rapidement vos articles phares ainsi que l'annuaire de vos clients habituels, pour éviter les recopies inutiles au moment de la vente.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start stagger-item">
+                        <div class="bg-accent text-white rounded-circle d-flex align-items-center justify-content-center me-4 shadow-glow" style="width: 60px; height: 60px; flex-shrink: 0; font-size: 1.5rem; font-weight: bold;">3</div>
+                        <div>
+                            <h4 class="font-outfit fw-bold text-white">Générez des gains sans limite</h4>
+                            <p class="text-muted font-inter small">Ouvrez l'application devant l'acheteur, créez son devis, partagez-le par WhatsApp en un clic, et encaissez l'argent !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof (Testimonials) Section -->
+    <section class="py-5 position-relative z-1 mb-3">
+        <div class="container py-5">
+            <div class="text-center mb-5 gs-reveal-up">
+                <h2 class="font-outfit fw-bold display-4">Ils ont changé leur <span class="text-gradient">statut social</span></h2>
+                <p class="text-muted font-inter mx-auto mt-3" style="max-width: 600px;">Des centaines d'indépendants utilisent notre solution de poche chaque jour dans leurs boutiques.</p>
+            </div>
+            <div class="row g-4 stagger-container">
+                <!-- Testimonial 1 -->
+                <div class="col-md-6 stagger-item">
+                    <div class="glass-card p-4 rounded-4" style="border-top: 3px solid var(--primary);">
+                        <i class="bi bi-quote fs-1 text-primary opacity-50 position-absolute top-0 end-0 mt-3 me-4"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="testimonial-avatar-wrapper me-3">
+                                <img src="assets/img/testimonial_1.png" alt="Ahmed Lassimi" class="testimonial-img-premium shadow-glow">
+                            </div>
+                            <div>
+                                <h5 class="font-outfit fw-bold mb-0 text-white">Ahmed Lassimi</h5>
+                                <small class="text-accent font-inter">Grossiste en Matériaux</small>
+                            </div>
+                        </div>
+                        <p class="text-muted font-inter fst-italic">"Avant, mes partenaires pensaient que ma petite entreprise n'était pas officielle parce que je facturais sur des carnets mal écrits. DevisPro a transformé mon image et m'a permis de remporter des marchés B2B énormes."</p>
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-md-6 stagger-item">
+                    <div class="glass-card p-4 rounded-4" style="border-top: 3px solid var(--purple);">
+                        <i class="bi bi-quote fs-1 text-purple opacity-50 position-absolute top-0 end-0 mt-3 me-4"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="testimonial-avatar-wrapper me-3">
+                                <img src="assets/img/testimonial_2.png" alt="Mariam" class="testimonial-img-premium shadow-glow">
+                            </div>
+                            <div>
+                                <h5 class="font-outfit fw-bold mb-0 text-white">MARIAM</h5>
+                                <small class="text-purple font-inter">Propriétaire de Boutique</small>
+                            </div>
+                        </div>
+                        <p class="text-muted font-inter fst-italic">"C'est rapide, même lorsque je suis occupée à servir. Je connecte mon imprimante Bluetooth thermique et je sors le reçu ou je leur envoie sur WhatsApp pendant qu'ils attendent. L'outil se rembourse vite."</p>
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 position-relative z-1 mb-5 gs-bg-changer">
+        <div class="container py-5">
+            <div class="text-center mb-5 gs-reveal-up">
+                <div class="badge bg-danger text-white mb-3 px-3 py-2 rounded-pill shadow-glow pulse-mini"><i class="bi bi-rocket-takeoff-fill me-2"></i> OFFRE DE LANCEMENT : 35 000 F AU LIEU DE 39 000 F !</div>
+                <h2 class="font-outfit fw-bold display-4">Combien vaut <span class="text-gradient">votre confort ?</span></h2>
+                <p class="text-muted lead mx-auto" style="max-width: 650px;">Profitez du tarif ÉLITE Annuel à 35 000 F au lieu de 39 000 F ! <br>(Offre réservée aux 50 premiers abonnés)</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center align-items-center pricing-grid">
+                <!-- 1 Mois -->
+                <div class="col-lg-3 col-md-6 price-card-item">
+                    <div class="glass-card rounded-5 p-4 text-center h-100 d-flex flex-column hover-rise" data-tilt data-tilt-mobile="false"-glare data-tilt data-tilt-mobile="false" data-tilt-max-glare="0.2">
+                        <h4 class="font-outfit fw-bold mb-3 text-secondary">1 Mois</h4>
+                        <div class="fs-1 fw-bold text-light mb-1">5 000</div>
+                        <p class="text-muted fw-bold mb-4">FCFA / mois</p>
+                        <ul class="list-unstyled text-start mb-auto font-inter small border-top border-secondary border-opacity-25 pt-4">
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i> Toutes les fonctions Pro</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i> Mode 100% hors-ligne</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i> Modèles & dictée illimitées</li>
+                        </ul>
+                        <a href="https://wa.me/22657222160?text=Bonjour%20DevisPro%2C%20je%20souhaite%20activer%20la%20licence%20ELITE%20pour%201%20mois%20(5000%20FCFA)." target="_blank" class="btn btn-outline-info w-100 rounded-pill mt-4 fw-bold shadow-sm transition-scale magnetic-btn">Activer 1 mois</a>
+                    </div>
+                </div>
+
+                <!-- 3 Mois -->
+                <div class="col-lg-3 col-md-6 price-card-item">
+                    <div class="glass-card rounded-5 p-4 text-center h-100 d-flex flex-column border-info hover-rise" data-tilt data-tilt-mobile="false"-glare data-tilt data-tilt-mobile="false" data-tilt-max-glare="0.2">
+                        <h4 class="font-outfit fw-bold mb-3 text-primary">3 Mois</h4>
+                        <div class="fs-1 fw-bold text-light mb-1">12 500</div>
+                        <p class="text-muted fw-bold mb-4">FCFA / trimestre</p>
+                        <ul class="list-unstyled text-start mb-auto font-inter small border-top border-secondary border-opacity-25 pt-4">
+                            <li class="mb-2 d-flex"><i class="bi bi-star-fill text-warning me-3 mt-1"></i> Économisez 2 500 FCFA</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i> Support prioritaire inclus</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i> Idéal pour les PME</li>
+                        </ul>
+                        <a href="https://wa.me/22657222160?text=Bonjour%20DevisPro%2C%20je%20souhaite%20activer%20la%20licence%20ELITE%20pour%203%20mois%20(12500%20FCFA)." target="_blank" class="btn btn-outline-info w-100 rounded-pill mt-4 fw-bold shadow-sm transition-scale magnetic-btn">Activer 3 mois</a>
+                    </div>
+                </div>
+
+                <!-- 6 Mois (POPULAIRE) -->
+                <div class="col-lg-3 col-md-6 position-relative z-3 price-card-item">
+                    <div class="position-absolute top-50 start-50 translate-middle w-100 h-100 bg-primary opacity-25 rounded-5" style="filter: blur(40px); z-index: -1;"></div>
+                    
+                    <div class="glass-card pricing-card rounded-5 p-4 py-5 text-center h-100 position-relative overflow-hidden shadow-dashboard d-flex flex-column hover-rise" data-tilt data-tilt-mobile="false" data-tilt-max-glare="0.5">
+                        <div class="ribbon"><span>MAX RENTA</span></div>
+                        <h4 class="font-outfit fw-black mb-3 text-gradient fs-2">6 Mois</h4>
+                        <div class="display-5 fw-bold text-light mb-1">22 500</div>
+                        <div class="badge bg-danger rounded-pill mb-4 fs-6 py-2 px-3 shadow-glow mt-2">Vous gagnez 7 500 F</div>
+                        <ul class="list-unstyled text-start mb-auto font-inter border-top border-secondary border-opacity-25 pt-1 text-light fw-medium small">
+                            <li class="mb-2 d-flex"><i class="bi bi-fire text-warning me-3 mt-1"></i> Le choix N°1 des grossistes</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-info me-3 mt-1"></i> Les futurs clients paient le prix</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-headset text-info me-3 mt-1"></i> Assistance WhatsApp Direct</li>
+                        </ul>
+                        <a href="https://wa.me/22657222160?text=Bonjour%20DevisPro%2C%20je%20souhaite%20activer%20la%20licence%20ELITE%20pour%206%20mois%20(22500%20FCFA)." target="_blank" class="btn btn-premium w-100 rounded-pill mt-4 fw-bold py-3 fs-5 shadow-glow transition-scale magnetic-btn">Booster mon chiffre !</a>
+                    </div>
+                </div>
+
+                <!-- 1 An -->
+                <div class="col-lg-3 col-md-6 price-card-item">
+                    <div class="glass-card rounded-5 p-4 text-center h-100 d-flex flex-column border border-purple hover-rise" data-tilt data-tilt-mobile="false"-glare data-tilt data-tilt-mobile="false" data-tilt-max-glare="0.2">
+                        <h4 class="font-outfit fw-bold mb-3 text-purple">1 Année Entière</h4>
+                        <div class="fs-1 fw-bold text-light mb-1">39 000</div>
+                        <p class="text-purple fw-bold mb-4">FCFA / an (~3250F/m)</p>
+                        <ul class="list-unstyled text-start mb-auto font-inter small border-top border-secondary border-opacity-25 pt-4">
+                            <li class="mb-2 d-flex"><i class="bi bi-gem text-purple me-3 mt-1"></i> Économie de 21 000 FCFA</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-purple me-3 mt-1"></i> Tranquillité pendant 365j</li>
+                            <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill text-purple me-3 mt-1"></i> Toutes les options au max</li>
+                        </ul>
+                        <a href="https://wa.me/22657222160?text=Bonjour%20DevisPro%2C%20je%20souhaite%20profiter%20de%20l'offre%20de%20lancement%20pour%201%20an%20(35000%20FCFA%20au%20lieu%20de%2039000)." target="_blank" class="btn w-100 rounded-pill mt-4 fw-bold shadow-sm transition-scale magnetic-btn" style="background: rgba(142, 45, 226, 0.2); border: 1px solid #8e2de2; color: white;">Tranquillité totale</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Redesigned Elite Activation Journey -->
+            <div class="row mt-5 pt-4 justify-content-center activation-journey gs-reveal-up">
+                <!-- Connectors for Desktop -->
+                <div class="step-connector connector-1-2 d-none d-lg-block"></div>
+                <div class="step-connector connector-2-3 d-none d-lg-block"></div>
+
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="step-card-elite p-5 rounded-5 text-center h-100">
+                        <div class="step-number-glow">01</div>
+                        <div class="step-icon-circle"><i class="bi bi-gem"></i></div>
+                        <h5 class="font-outfit fw-bold text-white mb-3 text-uppercase tracking-wider">Sélection</h5>
+                        <p class="small text-muted font-inter">Choisissez le forfait Elite qui propulsera votre activité vers le sommet.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="step-card-elite p-5 rounded-5 text-center h-100 border-primary border-opacity-25" style="background: rgba(99, 102, 241, 0.05);">
+                        <div class="step-number-glow text-gradient">02</div>
+                        <div class="step-icon-circle bg-primary text-white shadow-glow"><i class="bi bi-chat-dots-fill"></i></div>
+                        <h5 class="font-outfit fw-bold text-white mb-3 text-uppercase tracking-wider">Transaction</h5>
+                        <p class="small text-muted font-inter">Paiement sécurisé via Wave ou Orange Money sur notre WhatsApp officiel.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card-elite p-5 rounded-5 text-center h-100">
+                        <div class="step-number-glow">03</div>
+                        <div class="step-icon-circle"><i class="bi bi-unlock-fill"></i></div>
+                        <h5 class="font-outfit fw-bold text-white mb-3 text-uppercase tracking-wider">Élévation</h5>
+                        <p class="small text-muted font-inter">Recevez votre clé unique et activez instantanément votre arsenal de vente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 position-relative z-1">
+        <div class="container py-5">
+            <div class="text-center mb-5 gs-reveal-up">
+                <h2 class="font-outfit fw-bold display-4">Questions <span class="text-gradient">Fréquentes</span></h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush premium-accordion" id="faqAccordion">
+                        <div class="accordion-item glass-card mb-3 rounded-4 overflow-hidden border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white fw-bold font-outfit py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    L'application fonctionne-t-elle vraiment sans Internet ?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-light-opacity font-inter">
+                                    Oui, 100%. DevisPro est conçu pour les zones à faible connectivité. Vos données sont stockées localement sur votre téléphone. Vous n'avez besoin d'Internet que pour le téléchargement initial et l'activation de la licence.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card mb-3 rounded-4 overflow-hidden border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white fw-bold font-outfit py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Mes données sont-elles en sécurité ?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-light-opacity font-inter">
+                                    Absolument. Contrairement aux solutions Cloud, nous n'avons aucun accès à vos factures ou à votre liste de clients. Tout reste dans votre appareil. C'est vous qui décidez de partager vos PDFs avec qui vous voulez.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card mb-3 rounded-4 overflow-hidden border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white fw-bold font-outfit py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Puis-je utiliser mon logo personnalisé ?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-light-opacity font-inter">
+                                    Oui, bien sûr. Vous pouvez importer votre logo et même choisir parmi 15 jeux de couleurs pour que vos factures reflètent parfaitement votre identité de marque. J'ai conçu 10 prototypes de base pour répondre à tous les besoins.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="download" class="pt-4 pb-2 mt-0 border-top border-secondary border-opacity-25 position-relative z-1 bg-dark-transparent font-inter">
+        <div class="container mt-2">
+            <div class="row mb-4 text-center text-md-start align-items-center gs-reveal-up">
+                <div class="col-md-7 mb-3 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+                        <img src="assets/img/logo.png" alt="Logo DevisPro" width="55" height="55" class="me-3 logo-spotlight">
+                        <h3 class="font-outfit fs-4 fw-black m-0">
+                            <span class="text-gradient">DevisPro</span>
+                        </h3>
+                    </div>
+                    <p class="text-muted pe-md-5 fw-medium ms-1 small mb-0">Devenez un négociant qui compte. Imprimez, signez, vendez à l'heure du numérique.</p>
+                </div>
+                <div class="col-md-5 text-md-end d-flex flex-column align-items-md-end justify-content-center">
+                    <a href="https://play.google.com/store/apps/details?id=com.devispro.facture" target="_blank" rel="noopener" class="btn btn-premium rounded-pill px-4 py-2 shadow-glow d-inline-flex align-items-center fw-bold magnetic-btn text-white">
+                        <i class="bi bi-google-play fs-4 me-2 text-white"></i> Obtenir l'application
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Lower Footer: Copyright & Links -->
+            <div class="text-center text-muted pt-3 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center small">
+                <small class="fw-bold opacity-75">&copy; DevisPro. L'outil du commerçant moderne.</small>
+                <div class="mt-2 mt-md-0 z-3 position-relative flex-wrap d-flex justify-content-center">
+                    <a href="contact.html" class="text-muted text-decoration-none small mx-2 nav-hover fw-bold magnetic-text opacity-75">Contact & FAQ</a>
+                    <a href="terms.html" class="text-muted text-decoration-none small mx-2 nav-hover fw-bold magnetic-text opacity-75">Conditions</a>
+                    <a href="privacy.html" class="text-muted text-decoration-none small mx-2 nav-hover fw-bold magnetic-text opacity-75">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action Button -->
+    <a href="contact.html" class="whatsapp-fab" title="Contactez-nous sur WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/22657222160" target="_blank" class="whatsapp-fab" title="Besoin d'aide ? Parlons sur WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modèles de Factures Premium - DevisPro</title>
+    
+    <meta name="description" content="Découvrez nos 10 modèles de factures et devis professionnels. Personnalisez vos exports avec 15 thèmes de couleurs pour un rendu élite.">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <div id="canvas-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-floating" id="mainNav">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand d-flex align-items-center fw-black font-outfit fs-3 magnetic-btn" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo DevisPro" width="48" height="48" class="me-3 logo-spotlight">
+                <span class="text-gradient">DevisPro</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto align-items-center font-inter">
+                    <li class="nav-item"><a class="nav-link fs-6 mx-3 nav-hover fw-medium magnetic-text" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link fs-6 mx-3 nav-hover fw-medium magnetic-text active text-primary" href="#">Nos Modèles</a></li>
+                    <li class="nav-item"><a class="nav-link fs-6 mx-3 nav-hover fw-medium magnetic-text" href="index.html#pricing">Licences</a></li>
+                </ul>
+                <div class="d-flex mt-3 mt-lg-0">
+                    <a class="btn btn-premium rounded-pill px-4 py-2 fw-semibold shadow-glow magnetic-btn" href="index.html#download">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Templates Hero -->
+    <header class="py-5 mt-5">
+        <div class="container pt-5 text-center">
+            <div class="badge border border-primary text-primary bg-blur mb-3 px-3 py-2 rounded-pill fw-bold gs-reveal">L'ART DE LA FACTURATION</div>
+            <h1 class="display-3 fw-bold font-outfit mb-4 gs-reveal">Une image <span class="text-gradient">impeccable</span> pour chaque client.</h1>
+            <p class="lead text-light-opacity mx-auto font-inter gs-reveal-fade mb-5" style="max-width: 800px;">
+                Basculez entre nos 10 modèles premium. Que vous soyez un artisan moderne, un grossiste traditionnel ou une agence créative, nos designs s'adaptent à votre identité avec 15 jeux de couleurs personnalisables.
+            </p>
+
+            <!-- Filters -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5 gs-reveal-up">
+                <button class="btn filter-btn active rounded-pill px-4 py-2 fw-bold" data-filter="all">Tous</button>
+                <button class="btn filter-btn rounded-pill px-4 py-2 fw-bold" data-filter="moderne">Moderne</button>
+                <button class="btn filter-btn rounded-pill px-4 py-2 fw-bold" data-filter="boutique">Boutique</button>
+                <button class="btn filter-btn rounded-pill px-4 py-2 fw-bold" data-filter="ticket">Ticket</button>
+                <button class="btn filter-btn rounded-pill px-4 py-2 fw-bold" data-filter="corporate">Corporate</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Templates Gallery -->
+    <section class="py-5 position-relative z-1">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Template 1: Classic Elite -->
+                <div class="col-lg-4 col-md-6 template-card" data-category="moderne">
+                    <div class="glass-card h-100 p-0 overflow-hidden shadow-dashboard" data-tilt data-tilt-max="10 shadow-glow">
+                        <div class="template-preview-container position-relative">
+                            <img src="assets/img/modele_pro.png" alt="Modèle Pro" class="img-fluid w-100 cursor-pointer" style="aspect-ratio: 3/4; object-fit: cover; object-position: top; border-bottom: 1px solid rgba(255,255,255,0.05);"
+                                 data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+                                 data-src="assets/img/modele_pro.png" 
+                                 data-title="Pro" 
+                                 data-desc="L'équilibre parfait entre tradition et modernité. Idéal pour les prestations de services formelles.">
+                            <div class="template-overlay d-flex align-items-center justify-content-center">
+                                <span class="btn btn-sm btn-outline-primary rounded-pill px-3">Agrandir <i class="bi bi-zoom-in"></i></span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-outfit fw-bold mb-2">Pro</h4>
+                            <p class="text-muted small font-inter mb-0">L'équilibre parfait entre tradition et modernité. Idéal pour les prestations de services formelles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 2: Modern Dark -->
+                <div class="col-lg-4 col-md-6 template-card" data-category="moderne">
+                    <div class="glass-card h-100 p-0 overflow-hidden shadow-dashboard" data-tilt data-tilt-max="10 shadow-glow">
+                        <div class="template-preview-container position-relative">
+                            <img src="assets/img/neo.png" alt="Modèle Néon Futuriste" class="img-fluid w-100 cursor-pointer" style="aspect-ratio: 3/4; object-fit: cover; object-position: top; border-bottom: 1px solid rgba(255,255,255,0.05);"
+                                 data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+                                 data-src="assets/img/neo.png" 
+                                 data-title="NÉON FUTURISTE (PRO)" 
+                                 data-desc="Un rendu impactant et technologique. Idéal pour les boutiques de haute technologie.">
+                            <div class="template-overlay d-flex align-items-center justify-content-center">
+                                <span class="btn btn-sm btn-outline-primary rounded-pill px-3">Agrandir <i class="bi bi-zoom-in"></i></span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-outfit fw-bold mb-2">NÉON FUTURISTE (PRO)</h4>
+                            <p class="text-muted small font-inter mb-0">Un rendu impactant et technologique. Idéal pour les boutiques de haute technologie.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 3: Minimalist Professional -->
+                <div class="col-lg-4 col-md-6 template-card" data-category="corporate">
+                    <div class="glass-card h-100 p-0 overflow-hidden shadow-dashboard" data-tilt data-tilt-max="10 shadow-glow">
+                        <div class="template-preview-container position-relative">
+                            <img src="assets/img/minimaliste.png" alt="Modèle Minimaliste et Épuré" class="img-fluid w-100 cursor-pointer" style="aspect-ratio: 3/4; object-fit: cover; object-position: top; border-bottom: 1px solid rgba(255,255,255,0.05);"
+                                 data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+                                 data-src="assets/img/minimaliste.png" 
+                                 data-title="Minimaliste & Épuré" 
+                                 data-desc="Droit au but. Pour ceux qui privilégient la clarté absolue et la rapidité de lecture.">
+                            <div class="template-overlay d-flex align-items-center justify-content-center">
+                                <span class="btn btn-sm btn-outline-primary rounded-pill px-3">Agrandir <i class="bi bi-zoom-in"></i></span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-outfit fw-bold mb-2">Minimaliste & Épuré</h4>
+                            <p class="text-muted small font-inter mb-0">Droit au but. Pour ceux qui privilégient la clarté absolue et la rapidité de lecture.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 4: Ticket Thermique -->
+                <div class="col-lg-4 col-md-6 template-card" data-category="ticket">
+                    <div class="glass-card h-100 p-0 overflow-hidden shadow-dashboard" data-tilt data-tilt-max="10 shadow-glow">
+                        <div class="template-preview-container position-relative">
+                            <img src="assets/img/ticket_de_caisse.png" alt="Modèle Ticket Thermique" class="img-fluid w-100 cursor-pointer" style="aspect-ratio: 3/4; object-fit: cover; object-position: top; border-bottom: 1px solid rgba(255,255,255,0.05);"
+                                 data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+                                 data-src="assets/img/ticket_de_caisse.png" 
+                                 data-title="Ticket Boutique" 
+                                 data-desc="Adapté aux imprimantes thermiques 58/80mm. Idéal pour la vente au comptoir.">
+                            <div class="template-overlay d-flex align-items-center justify-content-center">
+                                <span class="btn btn-sm btn-outline-primary rounded-pill px-3">Agrandir <i class="bi bi-zoom-in"></i></span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-outfit fw-bold mb-2">Ticket Boutique</h4>
+                            <p class="text-muted small font-inter mb-0">Adapté aux imprimantes thermiques 58/80mm. Idéal pour la vente au comptoir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 5: Prestige -->
+                <div class="col-lg-4 col-md-6 template-card" data-category="corporate">
+                    <div class="glass-card h-100 p-0 overflow-hidden shadow-dashboard" data-tilt data-tilt-max="10 shadow-glow">
+                        <div class="template-preview-container position-relative">
+                            <img src="assets/img/prestiges.png" alt="Modèle Créatif et Moderne" class="img-fluid w-100 cursor-pointer" style="aspect-ratio: 3/4; object-fit: cover; object-position: top; border-bottom: 1px solid rgba(255,255,255,0.05);"
+                                 data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+                                 data-src="assets/img/prestiges.png" 
+                                 data-title="Créatif et Moderne" 
+                                 data-desc="Le summum du raffinement. Réservé aux marques et boutiques haut de gamme voulant impressionner leurs clients.">
+                            <div class="template-overlay d-flex align-items-center justify-content-center">
+                                <span class="btn btn-sm btn-outline-primary rounded-pill px-3">Agrandir <i class="bi bi-zoom-in"></i></span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-outfit fw-bold mb-2">Créatif et Moderne</h4>
+                            <p class="text-muted small font-inter mb-0">Le summum du raffinement. Réservé aux marques et boutiques haut de gamme voulant impressionner leurs clients.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More to come... -->
+                <div class="col-lg-4 col-md-6 gs-reveal" style="transition-delay: 0.1s;">
+                    <div class="glass-card h-100 d-flex flex-column align-items-center justify-content-center p-4 text-center border-dashed border-primary border-opacity-25">
+                        <i class="bi bi-plus-circle-dotted display-5 mb-3 text-primary opacity-50"></i>
+                        <h4 class="font-outfit fw-bold mb-2">Et 5 autres...</h4>
+                        <p class="text-muted small font-inter">Personnalisables avec votre logo et vos couleurs.</p>
+                        <a href="index.html#pricing" class="btn btn-outline-primary btn-sm rounded-pill mt-2 fw-bold">Débloquer tout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade lightbox-modal" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="modal-body p-0 position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="row g-0">
+                        <div class="col-md-7 bg-dark d-flex align-items-center justify-content-center p-3">
+                            <img src="" id="lightboxImg" class="img-fluid" style="max-height: 80vh; width: 100%; object-fit: contain;" alt="Preview">
+                        </div>
+                        <div class="col-md-5 p-5 d-flex flex-column justify-content-center">
+                            <div class="badge bg-indigo text-white mb-3 px-3 py-2 rounded-pill align-self-start">APERÇU MODÈLE</div>
+                            <h3 class="font-outfit fw-bold text-white mb-3" id="lightboxTitle">Titre</h3>
+                            <p class="text-light-opacity font-inter mb-4" id="lightboxDesc">Description...</p>
+                            <a href="https://wa.me/22657222160?text=Bonjour%20DevisPro%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20les%20licences%20pour%20d%C3%A9bloquer%20ce%20mod%C3%A8le%20nomm%C3%A9%20Elite." target="_blank" class="btn btn-premium rounded-pill w-100 py-3 fw-bold shadow-glow">Débloquer ce modèle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 border-top border-secondary border-opacity-25 bg-dark-transparent position-relative z-1">
+        <div class="container text-center">
+            <img src="assets/img/logo.png" alt="Logo DevisPro" width="40" class="mb-3 rounded shadow">
+            <h3 class="font-outfit fw-bold text-gradient mb-4">DevisPro</h3>
+            <div class="d-flex justify-content-center gap-4 mb-4 font-inter small">
+                <a href="index.html" class="text-muted text-decoration-none nav-hover">Accueil</a>
+                <a href="index.html#features" class="text-muted text-decoration-none nav-hover">Fonctionnalités</a>
+                <a href="index.html#pricing" class="text-muted text-decoration-none nav-hover">Prix</a>
+                <a href="contact.html" class="text-muted text-decoration-none nav-hover">Contact</a>
+            </div>
+            <hr class="w-25 mx-auto border-secondary border-opacity-25">
+            <small class="text-muted opacity-50">&copy; DevisPro - L'outil des commerçants d'élite.</small>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/22657222160" target="_blank" class="whatsapp-fab" title="Besoin d'aide ? Parlons sur WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+</body>
+</html>
