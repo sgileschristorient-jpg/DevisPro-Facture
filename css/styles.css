@@ -27,14 +27,33 @@
 }
 
 html {
-    font-size: 17px; /* Agrandit l'entièreté de la police et des éléments proportionnels */
+    font-size: 17px;
+}
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Force all sections to stay within bounds */
+section, header, footer, .container, .container-fluid {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Prevent Bootstrap rows from causing horizontal overflow */
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
-    overflow-x: hidden;
-    position: relative;
     scroll-behavior: smooth;
     /* Hide native cursor for desktop */
     cursor: none; 
