@@ -96,7 +96,7 @@ window.addEventListener('scroll', function() {
 gsap.utils.toArray('.gs-reveal').forEach((elem) => {
     gsap.fromTo(elem, 
         { autoAlpha: 0, y: 50 }, 
-        { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 1.5, ease: "power4.out", scrollTrigger: {
+        { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: "power4.out", scrollTrigger: {
             trigger: elem,
             start: "top 85%"
         }
@@ -107,7 +107,7 @@ gsap.utils.toArray('.gs-reveal').forEach((elem) => {
 gsap.utils.toArray('.gs-reveal-up').forEach((elem) => {
     gsap.fromTo(elem, 
         { autoAlpha: 0, y: 30 }, 
-        { autoAlpha: 1, y: 0, duration: 1, ease: "power2.out", scrollTrigger: {
+        { autoAlpha: 1, y: 0, duration: 0.6, ease: "power2.out", scrollTrigger: {
             trigger: elem,
             start: "top 85%"
         }
@@ -215,6 +215,8 @@ gsap.fromTo('.price-card-item',
         start: "top 80%"
     }
 });
+
+
 
 // ----------------------------------------------------
 // 4. THREE.JS BACKGROUND ANIMATION
