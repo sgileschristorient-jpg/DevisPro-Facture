@@ -165,7 +165,7 @@ const translations = {
     "© DevisPro. L'outil du commerçant moderne.": { en: "© DevisPro. The modern merchant's tool." },
     "Contact & FAQ": { en: "Contact & FAQ" },
     "Conditions": { en: "Terms" },
-    "Confidentialité": { en: "Privacy" }
+    "Confidentialité": { en: "Privacy" },
 
     // Nouvelles Traductions Globales
     "Télécharger DevisPro - L'Arsenal de Facturation": { en: "Download DevisPro - The Billing Arsenal" },
